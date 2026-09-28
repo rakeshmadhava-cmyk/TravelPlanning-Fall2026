@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNW Trip Itinerary & Tuesday Decision Poll</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 24px 16px; }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { border-bottom: 1px solid var(--card-border); padding-bottom: 20px; margin-bottom: 28px; }
+    h1 { font-size: 1.85rem; color: #fff; margin-bottom: 6px; }
+    .subtitle { color: var(--text-muted); font-size: 0.95rem; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-right: 6px; }
+    .badge-locked { background: rgba(34, 197, 94, 0.15); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); }
+    .badge-tbd { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-action { background: rgba(239, 68, 68, 0.15); color: var(--red); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+    .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+    .card-title { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 14px; }
+    @media(min-width: 640px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+    .option-box { background: rgba(15, 23, 42, 0.6); border: 1px solid var(--card-border); border-radius: 8px; padding: 16px; }
+    .option-box h4 { color: var(--accent); margin-bottom: 8px; font-size: 1.05rem; }
+
+    .timeline { position: relative; padding-left: 20px; border-left: 2px solid var(--card-border); margin-left: 8px; }
+    .timeline-item { position: relative; margin-bottom: 24px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot { position: absolute; left: -27px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+    .timeline-dot.locked { background: var(--green); }
+    .timeline-dot.tbd { background: var(--amber); }
+    .timeline-date { font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: 4px; }
+    .timeline-content { font-size: 0.92rem; color: #cbd5e1; }
+    .timeline-content li { margin-bottom: 6px; list-style-type: none; }
+    .timeline-content li strong { color: #fff; }
+
+    /* Form Styles */
+    form { display: grid; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 0.88rem; font-weight: 600; color: #cbd5e1; }
+    input[type="text"], select, textarea { background: #0f172a; border: 1px solid var(--card-border); color: #fff; padding: 10px; border-radius: 6px; font-size: 0.95rem; }
+    input[type="text"]:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
+    .radio-group { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .radio-card { display: flex; align-items: flex-start; gap: 10px; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--card-border); padding: 12px; border-radius: 6px; cursor: pointer; }
+    .radio-card input { margin-top: 4px; }
+    button { background: var(--accent); color: #0f172a; font-weight: 700; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+    button:hover { background: var(--accent-hover); }
+    .submission-note { font-size: 0.82rem; color: var(--text-muted); text-align: center; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Pacific Northwest: Eugene & Bandon Dunes</h1>
+    <div class="subtitle">Travelers: Rakesh Madhava, James, Paul, Gabe Coleman | Updated: Late Fall 2026</div>
+  </header>
+
+  <!-- UPDATE: LODGING ADDITIONS -->
+  <div class="card">
+    <div class="card-title">
+      <span>1. Updates: Confirmed Lodging & Bedding</span>
+      <span class="badge badge-locked">Confirmed</span>
+    </div>
+    <ul style="padding-left: 20px; color: #cbd5e1;">
+      <li><strong>Lily Pond Rooms Confirmed (Monday Night):</strong> 2x Lily Pond rooms are secured for Monday night, Nov 2, eliminating the lodging gap after Sheep Ranch.</li>
+      <li><strong>Rollaway Beds Added (Sunday Night):</strong> Rollaway beds confirmed for Sunday night, Nov 1 in the 2x Golf King INN rooms so all four golfers have dedicated sleeping arrangements.</li>
+    </ul>
+  </div>
+
+  <!-- TBD: TUESDAY MORNING & GOLF/DEPARTURE DECISION -->
+  <div class="card">
+    <div class="card-title">
+      <span>2. TBD: Tuesday, Nov 3 Golf & Departure Decision</span>
+      <span class="badge badge-tbd">Decision Required</span>
+    </div>
+    <p style="color: #cbd5e1; font-size: 0.95rem;">
+      No golf is currently booked for Tuesday, Nov 3. Depending on group preference, Rakesh will book either Shorty's or Old Macdonald.
+    </p>
+
+    <div class="grid-2">
+      <!-- OPTION 1 -->
+      <div class="option-box">
+        <h4>Option 1: Shorty's & Tuesday Flight Out</h4>
+        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">
+          • <strong>Golf:</strong> Shorty's (19-hole Par-3) at 8:45 AM (Finishes ~11:00 AM).<br>
+          • <strong>Transit:</strong> Depart Bandon 11:30 AM → Arrive Eugene Airport (EUG) 2:00 PM.<br>
+          • <strong>Flights:</strong> United connection via DEN (Depart EUG ~3:45 PM → Arrive ORD ~11:30 PM Tuesday night).<br>
+          • <strong>Lodging:</strong> Check out of Lily Pond Tuesday morning; no additional night needed.
+        </p>
+      </div>
+
+      <!-- OPTION 2 -->
+      <div class="option-box">
+        <h4>Option 2: Old Macdonald & Wednesday Flight Out</h4>
+        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">
+          • <strong>Golf:</strong> Old Macdonald full 18 holes after 12:30 PM (Finishes ~5:00 PM).<br>
+          • <strong>Transit:</strong> Cannot fly Tuesday night (commercial window closes before 8:00 PM EUG arrival).<br>
+          • <strong>Lodging Options (Tuesday Night):</strong><br>
+          &nbsp;&nbsp;1. <em>Resort Waitlist:</em> Waitlist on-property for Tuesday night (Lily Pond or any available room).<br>
+          &nbsp;&nbsp;2. <em>Bandon Town:</em> Hold cancelable backup hotel 10 mins away (e.g., Best Western Inn at Face Rock).<br>
+          &nbsp;&nbsp;3. <em>Eugene Hotel:</em> Drive inland after golf (~2.5 hrs), stay overnight in Eugene, wake up 10 mins from EUG.<br>
+          • <strong>Flights:</strong> Fly home Wednesday, Nov 4 (UA nonstop EUG → ORD or morning connection).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RAKESH ACTION ITEMS -->
+  <div class="card">
+    <div class="card-title">
+      <span>3. Rakesh Personal Logistics & Actions</span>
+      <span class="badge badge-action">Action Needed</span>
+    </div>
+    <ul style="padding-left: 20px; color: #cbd5e1; font-size: 0.92rem;">
+      <li><strong>PIABA Conference:</strong> Tentatively departing Oct 27 or Oct 28 for The Broadmoor in Colorado Springs, CO.</li>
+      <li><strong>Flight Rebooking:</strong> Cancel original ORD → EUG nonstop (FR96V9); rebook flight from Colorado (COS/DEN) → Eugene (EUG) arriving Friday, Oct 30 before 11:57 AM.</li>
+      <li><strong>Return Flight (Option 1):</strong> Yet to be booked. Targeting Tuesday afternoon United 1-stop via DEN (Depart EUG ~3:45 PM → Arrive ORD ~11:30 PM).</li>
+      <li><strong>Tee Sheet Action:</strong> Contact Bandon reservations immediately to secure either <strong>Shorty's (8:45 AM)</strong> or <strong>Old Macdonald (after 12:30 PM)</strong> once the poll concludes.</li>
+      <li><strong>Lodging Backup Action:</strong> If Option 2 is chosen, waitlist Bandon resort for Tuesday night and hold a fully cancelable backup room in either Bandon town or Eugene.</li>
+    </ul>
+  </div>
+
+  <!-- MASTER TRIP CHRONOLOGY -->
+  <div class="card">
+    <div class="card-title">
+      <span>4. Master Trip Chronology</span>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Oct 27-30 -->
+      <div class="timeline-item">
+        <div class="timeline-dot tbd"></div>
+        <div class="timeline-date">Tue, Oct 27 / Wed, Oct 28 – Fri, Oct 30 (Tentative - Rakesh Solo)</div>
+        <div class="timeline-content">
+          <li>• PIABA Annual Meeting @ The Broadmoor, Colorado Springs, CO.</li>
+        </div>
+      </div>
+
+      <!-- Oct 30 -->
+      <div class="timeline-item">
+        <div class="timeline-dot locked"></div>
+        <div class="timeline-date">Friday, October 30, 2026 (Arrival & Reunion)</div>
+        <div class="timeline-content">
+          <li>• <strong>11:57 AM PDT:</strong> Group lands at Eugene (EUG) (UA 1225 from ORD; Rakesh connects from CO).</li>
+          <li>• <strong>12:15 PM PDT:</strong> Avis Car Rental pickup (Conf: 23368150US1).</li>
+          <li>• <strong>01:00 PM PDT:</strong> Check into Autzen Retreat (2574 Sorrel Way, Eugene, OR).</li>
+          <li>• <strong>04:00 PM – 06:00 PM PDT:</strong> NU Alumni Friday Night Huddle @ Gratitude Brewing (540 E 8th Ave).</li>
+        </div>
+      </div>
+
+      <!-- Oct 31 -->
+      <div class="timeline-item">
+        <div class="timeline-dot locked"></div>
+        <div class="timeline-date">Saturday, October 31, 2026 (Game Day)</div>
+        <div class="timeline-content">
+          <li>• <strong>Pre-Game:</strong> NU Alumni "N Zone" Pep Rally @ Essig Field.</li>
+          <li>• <strong>Game Time (TBD):</strong> Northwestern Wildcats vs. Oregon Ducks @ Autzen Stadium[cite: 1, 2].</li>
+          <li>• Confirmed: 4 Tickets in Section GA1, Row GA0 (Acct #222080)[cite: 1, 2].</li>
+          <li>• Lodging: Autzen Retreat (Eugene).</li>
+        </div>
+      </div>
+
+      <!-- Nov 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot locked"></div>
+        <div class="timeline-date">Sunday, November 1, 2026 (Drive to Bandon & Round 1)</div>
+        <div class="timeline-content">
+          <li>• <em>Note: Daylight Saving Time ends (clocks fall back 1 hr). Sunset ~5:10 PM.</em></li>
+          <li>• <strong>08:30 AM PDT:</strong> Check out of Eugene Airbnb.</li>
+          <li>• <strong>08:45 AM PDT:</strong> Depart Eugene for Bandon Dunes (~135 miles / 2.5 hrs).</li>
+          <li>• <strong>11:15 AM PDT:</strong> Arrive Bandon Dunes; drop luggage, warm up, inquire on earlier tee slots.</li>
+          <li>• <strong>12:40 PM PDT:</strong> <strong>GOLF: Bandon Dunes Course (4 players)</strong>. <em>Brisk pace required to finish in daylight.</em></li>
+          <li>• <strong>05:15 PM PDT:</strong> Check into 2x Golf King INN Rooms (Conf: R130C52.1 & R130C52.2) + Rollaways.</li>
+        </div>
+      </div>
+
+      <!-- Nov 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot locked"></div>
+        <div class="timeline-date">Monday, November 2, 2026 (31-Hole Doubleheader)</div>
+        <div class="timeline-content">
+          <li>• <strong>07:45 AM PDT:</strong> <strong>GOLF: Bandon Preserve (13-hole Par-3 course, 4 players)</strong>.</li>
+          <li>• <strong>09:45 AM PDT:</strong> Check out of Inn Rooms (Bell Services transfers bags to Lily Pond).</li>
+          <li>• <strong>11:40 AM PDT:</strong> <strong>GOLF: Sheep Ranch Course (4 players)</strong>.</li>
+          <li>• <strong>04:30 PM PDT:</strong> Check into 2x Lily Pond Rooms (Confirmed Night 2).</li>
+          <li>• <strong>Evening:</strong> Group Dinner at Ghost Tree Grill or Pacific Grill.</li>
+        </div>
+      </div>
+
+      <!-- Nov 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot tbd"></div>
+        <div class="timeline-date">Tuesday, November 3, 2026 (TBD Based on Poll)</div>
+        <div class="timeline-content">
+          <li>• <strong>Path A:</strong> Shorty's at 8:45 AM → Depart Bandon 11:30 AM → Arrive EUG 2:00 PM → Flights home via DEN.</li>
+          <li>• <strong>Path B:</strong> Old Macdonald full 18 after 12:30 PM → Lodging TBD (Bandon waitlist, Bandon town, or Eugene hotel) → Fly Wednesday.</li>
+        </div>
+      </div>
+
+      <!-- Nov 4 -->
+      <div class="timeline-item">
+        <div class="timeline-dot tbd"></div>
+        <div class="timeline-date">Wednesday, November 4, 2026 (Hold / Potential Departure)</div>
+        <div class="timeline-content">
+          <li>• <strong>11:30 AM PDT:</strong> Current Avis rental car return time at EUG. Used for Path B departures.</li>
+          <li>• <strong>Afternoon:</strong> Direct UA EUG → ORD or morning connection.</li>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GROUP PREFERENCE FORM -->
+  <div class="card">
+    <div class="card-title">
+      <span>5. Vote Your Preference (Paul, Gabe, James)</span>
+    </div>
+    <form action="mailto:rakesh.madhava@gmail.com" method="post" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <select id="name" name="Name" required>
+          <option value="">-- Select Traveler --</option>
+          <option value="Paul">Paul</option>
+          <option value="Gabe">Gabe Coleman</option>
+          <option value="James">James</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Select Your Tuesday Strategy:</label>
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="Tuesday_Plan" value="Option 1 (Shortys + Tuesday Flight)" required>
+            <div>
+              <strong>Option 1: Play Shorty's (8:45 AM) & Fly Home Tuesday Night</strong><br>
+              <span style="font-size:0.84rem; color:var(--text-muted);">Play 19-hole par 3, drive to Eugene by 2:00 PM, catch mid-afternoon United flight via Denver, sleep in own bed Tuesday night. No extra lodging needed.</span>
+            </div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="Tuesday_Plan" value="Option 2 (Old Mac + Stay Tuesday Night)">
+            <div>
+              <strong>Option 2: Play Old Macdonald (Full 18) & Fly Home Wednesday</strong><br>
+              <span style="font-size:0.84rem; color:var(--text-muted);">Play championship 18 after 12:30 PM, secure Tuesday night lodging (Resort waitlist, Bandon town hotel, or Eugene hotel), fly out Wednesday, Nov 4.</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lodging_pref">If Option 2, Preferred Tuesday Night Lodging:</label>
+        <select id="lodging_pref" name="Tuesday_Lodging_Preference">
+          <option value="N/A - Prefer Option 1">N/A - Prefer Option 1</option>
+          <option value="Bandon Resort Waitlist">Resort Waitlist (Lily Pond or any room)</option>
+          <option value="Bandon Town Hotel">Off-Property Hotel in Town of Bandon</option>
+          <option value="Eugene Hotel">Drive to Eugene Tuesday Night (Near Airport)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes / Caddie Preferences / Dietary Restrictions:</label>
+        <textarea id="notes" name="Notes" rows="3" placeholder="Double-bag caddie preference, return flight thoughts, etc."></textarea>
+      </div>
+
+      <button type="submit">Submit Preference to Rakesh</button>
+      <div class="submission-note">Submitting will open your default email client with your vote pre-filled.</div>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
